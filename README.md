@@ -24,6 +24,8 @@ $ uv run doit pretest
 $ uv run pytest
 ```
 
+The keyword grammars (`src/hedy/data/grammars/keywords-<lang>.lark`) are generated from the keyword translations in `src/hedy/data/keywords/*.yaml` and are not checked in. They are generated automatically when `hedy` is imported and they are missing or older than the YAML files. You can also generate them explicitly with `uv run doit lark`.
+
 ## Running a Hedy program
 
 You can transpile and run a Hedy program from the command line. Pass the level and a file (or `-` to read the program from stdin):
